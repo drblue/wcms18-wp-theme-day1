@@ -6,7 +6,7 @@ get_header();
 	<h1>Welcome!</h1>
 
 	<div class="row">
-		<div class="col-md-9">
+		<div class="col-md-9 content">
 			<!-- Do we have any posts? -->
 			<?php if (have_posts()) : ?>
 				<!-- Yey, we has posts -->
@@ -24,7 +24,7 @@ get_header();
 			<!-- End of posts -->
 		</div><!-- /.col-md-9 -->
 
-		<div class="col-md-3">
+		<div class="col-md-3 blog-sidebar">
 			<!-- sidebar -->
 			<?php get_sidebar(); ?>
 			<!-- end sidebar -->

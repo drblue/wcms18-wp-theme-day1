@@ -24,7 +24,7 @@ get_header();
 			<!-- End of posts -->
 		</div><!-- /.col-md-9 -->
 
-		<div class="col-md-3">
+		<div class="col-md-3 blog-sidebar">
 			<!-- sidebar -->
 			<?php get_sidebar(); ?>
 			<!-- end sidebar -->

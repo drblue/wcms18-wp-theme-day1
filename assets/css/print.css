@@ -1,0 +1,8 @@
+.blog-sidebar {
+	display: none;
+}
+
+body .content {
+	flex-basis: 100%;
+	max-width: 100%;
+}

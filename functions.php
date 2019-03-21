@@ -42,5 +42,8 @@ function mbt_register_scripts_and_styles() {
 
 	// Add Theme CSS
 	wp_enqueue_style('style', get_stylesheet_directory_uri() . '/style.css', ['bootstrap']);
+
+	// Add Theme Print CSS
+	wp_enqueue_style('print-style', get_stylesheet_directory_uri() . '/assets/css/print.css', ['bootstrap', 'style'], null, 'print');
 }
 add_action('wp_enqueue_scripts', 'mbt_register_scripts_and_styles');
