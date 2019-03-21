@@ -2,7 +2,7 @@
 get_header();
 ?>
 
-<div class="container">
+<div class="container content">
 	<!-- Do we have a page? -->
 	<?php if (have_posts()) : ?>
 		<!-- Yey, we has a page -->

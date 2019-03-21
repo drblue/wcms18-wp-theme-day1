@@ -4,7 +4,7 @@ get_header();
 
 <div class="container">
 	<div class="row">
-		<div class="col-md-9">
+		<div class="col-md-9 content">
 			<!-- Do we have any posts? -->
 			<?php if (have_posts()) : ?>
 				<!-- Yey, we has posts -->
