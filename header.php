@@ -19,13 +19,15 @@
 			</button>
 
 			<?php
-				wp_nav_menu([
-					'menu' => 'main-menu',
-					'container_class' => 'collapse navbar-collapse', // wrapping div class
-					'container_id' => 'navbarNav', // wrapping div id
-					'menu_class' => 'navbar-nav ml-auto', // ul class
-					'walker' => new bs4Navwalker(),
-				]);
+				if (has_nav_menu('main-menu')) {
+					wp_nav_menu([
+						'menu' => 'main-menu',
+						'container_class' => 'collapse navbar-collapse', // wrapping div class
+						'container_id' => 'navbarNav', // wrapping div id
+						'menu_class' => 'navbar-nav ml-auto', // ul class
+						'walker' => new bs4Navwalker(),
+					]);
+				}
 			?>
 
 		</div><!-- /.container -->
