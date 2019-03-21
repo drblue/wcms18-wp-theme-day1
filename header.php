@@ -15,16 +15,21 @@
 
 <body>
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-		<a class="navbar-brand" href="/"><?php bloginfo('name'); ?></a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
+		<div class="container">
+			<a class="navbar-brand" href="/"><?php bloginfo('name'); ?></a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
 
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav mr-auto">
-				<li class="nav-item">
-					<a class="nav-link" href="#">Don't Click Me</a>
-				</li>
-			</ul>
-		</div>
+			<?php
+				wp_nav_menu([
+					'menu' => 'main-menu',
+					'container_class' => 'collapse navbar-collapse', // wrapping div class
+					'container_id' => 'navbarNav', // wrapping div id
+					'menu_class' => 'navbar-nav ml-auto', // ul class
+					'walker' => new bs4Navwalker(),
+				]);
+			?>
+
+		</div><!-- /.container -->
 	</nav>
