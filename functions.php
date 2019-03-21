@@ -30,3 +30,17 @@ function mbt_widgets_init() {
 	]);
 }
 add_action('widgets_init', 'mbt_widgets_init');
+
+/**
+ * Register scripts and styles for our theme.
+ *
+ * @return void
+ */
+function mbt_register_scripts_and_styles() {
+	// Add Bootstrap CSS
+	wp_enqueue_style('bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css', [], '4.3.1', 'all');
+
+	// Add Theme CSS
+	wp_enqueue_style('style', get_stylesheet_directory_uri() . '/style.css', ['bootstrap']);
+}
+add_action('wp_enqueue_scripts', 'mbt_register_scripts_and_styles');

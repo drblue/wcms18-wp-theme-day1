@@ -7,3 +7,7 @@ License: WTFPL
 License URI: http://www.wtfpl.net/
 Text Domain: mybasictheme
 */
+
+.widget-title {
+	font-size: 1.25rem;
+}
