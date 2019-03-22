@@ -55,3 +55,17 @@ h1 {
 	font-size: 1.25rem;
 	margin-bottom: 0.75rem;
 }
+
+/**
+ * Footer Styles
+ */
+footer {
+	background-color: #ccc;
+	color: #333;
+	margin-top: 2rem;
+	padding: 1rem 0;
+}
+
+footer .widget {
+	background-color: #eee;
+}

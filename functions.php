@@ -20,11 +20,22 @@ add_action('init', 'mbt_register_menus');
  * @return void
  */
 function mbt_widgets_init() {
+	// Blog Sidebar Widget Area
 	register_sidebar([
 		'name'			=> 'Blog Sidebar',
 		'id'			=> 'blog-sidebar',
 		'before_widget'	=> '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'	=> '</aside>',
+		'before_title'	=> '<h1 class="widget-title">',
+		'after_title'	=> '</h1>',
+	]);
+
+	// Footer Widget Area
+	register_sidebar([
+		'name'			=> 'Footer Area',
+		'id'			=> 'footer-widgets',
+		'before_widget'	=> '<div id="%1$s" class="col widget %2$s">',
+		'after_widget'	=> '</div>',
 		'before_title'	=> '<h1 class="widget-title">',
 		'after_title'	=> '</h1>',
 	]);
