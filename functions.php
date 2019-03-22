@@ -78,3 +78,18 @@ function mbt_register_scripts_and_styles() {
 	wp_enqueue_script('bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js', ['jquery', 'popper'], '4.3.1', true);
 }
 add_action('wp_enqueue_scripts', 'mbt_register_scripts_and_styles');
+
+/**
+ * Theme Setup Declaration
+ */
+function mbt_theme_setup() {
+	// Add support for Featured Images
+	add_theme_support('post-thumbnails');
+
+	// Set Image Size for Blog Thumbnail
+	set_post_thumbnail_size(180, 0, false);
+
+	// Add Image Size for Single Post Featured Image
+	add_image_size('featured-image', 1110, 0, false);
+}
+add_action('after_setup_theme', 'mbt_theme_setup');
