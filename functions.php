@@ -30,6 +30,16 @@ function mbt_widgets_init() {
 		'after_title'	=> '</h1>',
 	]);
 
+	// Page Sidebar Widget Area
+	register_sidebar([
+		'name'			=> 'Page Sidebar',
+		'id'			=> 'page-sidebar',
+		'before_widget'	=> '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'	=> '</aside>',
+		'before_title'	=> '<h1 class="widget-title">',
+		'after_title'	=> '</h1>',
+	]);
+
 	// Footer Widget Area
 	register_sidebar([
 		'name'			=> 'Footer Area',
