@@ -11,15 +11,10 @@ get_header();
 			<?php if (have_posts()) : ?>
 				<!-- Yey, we has posts -->
 				<?php while (have_posts()) : the_post(); ?>
-					<!-- This is a Blog Post -->
-					<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-					<div>Post Created: <?php echo get_the_date(); ?> in <?php the_category(); ?></div>
-
-					<?php the_excerpt(); ?>
-
-					<hr>
-					<!-- End of Blog Post -->
+					<?php get_template_part('template-parts/content', 'excerpt'); // template-parts/content-excerpt.php ?>
 				<?php endwhile; ?>
+			<?php else: ?>
+				<?php get_template_part('template-parts/content', 'none'); // template-parts/content-none.php ?>
 			<?php endif; ?>
 			<!-- End of posts -->
 		</div><!-- /.col-md-9 -->
