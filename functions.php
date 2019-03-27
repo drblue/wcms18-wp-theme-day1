@@ -108,7 +108,16 @@ add_action('after_setup_theme', 'mbt_theme_setup');
  * Filter the_content()
  */
 function mbt_filter_the_content($content) {
-	return $content;
+	$bad_words = file(get_stylesheet_directory() . '/inc/bad_words.txt', FILE_IGNORE_NEW_LINES);
+	$censored_words = [];
+
+	foreach ($bad_words as $bad_word) {
+		$len = strlen($bad_word);
+		$censored_word = str_repeat('*', $len);
+		array_push($censored_words, $censored_word);
+	}
+
+	return str_ireplace($bad_words, $censored_words, $content);
 }
 add_filter('the_content', 'mbt_filter_the_content', 10, 1);
 
