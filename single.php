@@ -2,7 +2,7 @@
 get_header();
 ?>
 
-<div class="container">
+<main class="container">
 	<div class="row">
 		<div class="col-md-9 content">
 			<!-- Do we have any posts? -->
@@ -19,7 +19,7 @@ get_header();
 
 		<?php get_sidebar(); ?>
 	</div><!-- /.row -->
-</div><!-- /.container -->
+</main><!-- /.container -->
 
 <?php
 get_footer();

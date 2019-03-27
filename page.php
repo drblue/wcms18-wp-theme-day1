@@ -2,7 +2,7 @@
 get_header();
 ?>
 
-<div class="container content">
+<main class="container content">
 	<!-- Do we have a page? -->
 	<?php if (have_posts()) : ?>
 		<!-- Yey, we has a page -->
@@ -15,7 +15,7 @@ get_header();
 		<?php endwhile; ?>
 	<?php endif; ?>
 	<!-- End of posts -->
-</div><!-- /.container -->
+</main><!-- /.container -->
 
 <?php
 get_footer();

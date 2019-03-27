@@ -2,7 +2,7 @@
 get_header();
 ?>
 
-<div class="container">
+<main class="container">
 	<h1><?php single_cat_title('Category Archive for: '); ?></h1>
 
 	<div class="row">
@@ -21,7 +21,7 @@ get_header();
 
 		<?php get_sidebar(); ?>
 	</div><!-- /.row -->
-</div><!-- /.container -->
+</main><!-- /.container -->
 
 <?php
 get_footer();
