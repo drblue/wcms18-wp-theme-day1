@@ -10,9 +10,13 @@ get_header();
 			<!-- Do we have any posts? -->
 			<?php if (have_posts()) : ?>
 				<!-- Yey, we has posts -->
-				<?php while (have_posts()) : the_post(); ?>
-					<?php get_template_part('template-parts/content', 'excerpt'); // template-parts/content-excerpt.php ?>
-				<?php endwhile; ?>
+				<div class="card-group">
+					<div class="row">
+						<?php while (have_posts()) : the_post(); ?>
+							<?php get_template_part('template-parts/content', 'excerpt'); // template-parts/content-excerpt.php ?>
+						<?php endwhile; ?>
+					</div><!-- /.row -->
+				</div><!-- /.card-group -->
 			<?php else: ?>
 				<?php get_template_part('template-parts/content', 'none'); // template-parts/content-none.php ?>
 			<?php endif; ?>
