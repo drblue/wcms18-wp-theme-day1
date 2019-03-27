@@ -110,6 +110,16 @@ function mbt_theme_setup() {
 		'flex-width'	=> true,
 		'header-text'	=> ['site-title', 'site-description'],
 	]);
+
+	// Add support for Custom Header
+	add_theme_support('custom-header', [
+		'default-image'			=> get_stylesheet_directory_uri() . '/assets/img/default-header-image.jpg',
+		'default-text-color'	=> '000',
+		'width'					=> 2560,
+		'height'				=> 500,
+		'flex-width'			=> true,
+		'flex-height'			=> true,
+	]);
 }
 add_action('after_setup_theme', 'mbt_theme_setup');
 
