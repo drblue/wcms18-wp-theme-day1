@@ -103,3 +103,38 @@ function mbt_theme_setup() {
 	add_image_size('featured-image', 1110, 0, false);
 }
 add_action('after_setup_theme', 'mbt_theme_setup');
+
+/**
+ * Filter the_content()
+ */
+function mbt_filter_the_content($content) {
+	return $content;
+}
+add_filter('the_content', 'mbt_filter_the_content', 10, 1);
+
+/**
+ * Filter the_title()
+ */
+function mbt_filter_the_title($title) {
+	if (in_the_loop() && is_single()) {
+		$title = $title . " (I was here)";
+	}
+	return $title;
+}
+add_filter('the_title', 'mbt_filter_the_title', 10, 1);
+
+/**
+ * Restrict the_excerpt to 20 words.
+ */
+function mbt_filter_excerpt_length($length) {
+	return 20;
+}
+add_filter('excerpt_length', 'mbt_filter_excerpt_length', 999, 1);
+
+/**
+ * Modify excerpt suffix.
+ */
+function mbt_filter_excerpt_more($more) {
+	return " Läs mer &raquo;";
+}
+add_filter('excerpt_more', 'mbt_filter_excerpt_more', 999, 1);
