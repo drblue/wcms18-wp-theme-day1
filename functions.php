@@ -101,8 +101,37 @@ function mbt_theme_setup() {
 
 	// Add Image Size for Single Post Featured Image
 	add_image_size('featured-image', 1110, 0, false);
+
+	// Add support for Custom Logo
+	add_theme_support('custom-logo', [
+		'height'		=> 40,
+		'width'			=> 200,
+		'flex-height'	=> false,
+		'flex-width'	=> true,
+		'header-text'	=> ['site-title', 'site-description'],
+	]);
 }
 add_action('after_setup_theme', 'mbt_theme_setup');
+
+/**
+ * Function for displaying the Custom Logo
+ */
+function mbt_the_custom_logo() {
+	// get logo media id
+	$custom_logo_id = get_theme_mod('custom_logo');
+
+	// get URL to logo
+	$logo_url = wp_get_attachment_image_src($custom_logo_id, 'full');
+
+	// do we have a custom logo set?
+	if (has_custom_logo()) {
+		// yes, we have a logo that we should display
+		echo '<img src="' . $logo_url[0] . '" class="img-fluid" alt="Site Logo" title="' . get_bloginfo('name') . '">';
+	} else {
+		// no, user has not set a logo so we should display the site title instead
+		bloginfo('name');
+	}
+}
 
 /**
  * Filter the_content()
