@@ -86,6 +86,9 @@ function mbt_register_scripts_and_styles() {
 
 	// Add bootstrap.js
 	wp_enqueue_script('bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js', ['jquery', 'popper'], '4.3.1', true);
+
+	// Add script.js
+	wp_enqueue_script('script', get_stylesheet_directory_uri() . '/assets/js/script.js', ['jquery', 'popper', 'bootstrap'], false, true);
 }
 add_action('wp_enqueue_scripts', 'mbt_register_scripts_and_styles');
 
