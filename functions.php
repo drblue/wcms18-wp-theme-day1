@@ -135,6 +135,6 @@ add_filter('excerpt_length', 'mbt_filter_excerpt_length', 999, 1);
  * Modify excerpt suffix.
  */
 function mbt_filter_excerpt_more($more) {
-	return ' <a href="' . get_permalink() . '">Läs mer &raquo;</a>';
+	return ' <div class="d-flex justify-content-end"><a href="' . get_permalink() . '" class="btn btn-primary">Läs mer &raquo;</a></div>';
 }
 add_filter('excerpt_more', 'mbt_filter_excerpt_more', 999, 1);
