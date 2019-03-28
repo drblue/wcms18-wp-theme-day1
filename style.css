@@ -79,3 +79,13 @@ footer .widget {
 .page-template-page-with-sidebar h1 {
 	color: red;
 }
+
+/**
+ * Card Styles
+ */
+.card {
+	cursor: pointer;
+}
+.card:hover {
+	background-color: #f9f9f9;
+}
