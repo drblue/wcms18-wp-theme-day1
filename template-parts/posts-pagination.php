@@ -1,8 +1,6 @@
-<div class="pagination-links d-flex justify-content-between">
-	<div class="previous-page">
-		<?php previous_posts_link(); ?>
-	</div>
-	<div class="next-page">
-		<?php next_posts_link(); ?>
-	</div>
+<div class="pagination-links">
+	<?php the_posts_pagination([
+		'show_all' => true,
+		'before_page_number' => 'Page',
+	]); ?>
 </div>
