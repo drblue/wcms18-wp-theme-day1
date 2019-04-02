@@ -161,7 +161,7 @@ function mbt_filter_the_content($content) {
 
 	return str_ireplace($bad_words, $censored_words, $content);
 }
-add_filter('the_content', 'mbt_filter_the_content', 10, 1);
+// add_filter('the_content', 'mbt_filter_the_content', 10, 1);
 
 /**
  * Filter the_title()

@@ -17,6 +17,10 @@ get_header();
 						<?php endwhile; ?>
 					</div><!-- /.row -->
 				</div><!-- /.card-group -->
+
+				<!-- pagination -->
+				<?php get_template_part('template-parts/posts-pagination'); ?>
+				<!-- /pagination -->
 			<?php else: ?>
 				<?php get_template_part('template-parts/content', 'none'); // template-parts/content-none.php ?>
 			<?php endif; ?>
