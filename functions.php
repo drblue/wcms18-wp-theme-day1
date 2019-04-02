@@ -189,3 +189,15 @@ function mbt_filter_excerpt_more($more) {
 	return ' <div class="d-flex justify-content-end"><a href="' . get_permalink() . '" class="btn btn-primary">Läs mer &raquo;</a></div>';
 }
 add_filter('excerpt_more', 'mbt_filter_excerpt_more', 999, 1);
+
+/**
+ * Modify all get posts queries.
+ */
+function mbt_exclude_faq_posts($query) {
+	if ($query->is_home() /*&& $query->is_main_query()*/) {
+		$faq_category = get_category_by_slug('faq');
+		$faq_category_id = $faq_category->term_id;
+		$query->set('cat', '-' . $faq_category_id);
+	}
+}
+add_action('pre_get_posts', 'mbt_exclude_faq_posts');
