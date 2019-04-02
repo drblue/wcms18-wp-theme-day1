@@ -1,8 +1,13 @@
 <?php
+	// detta inläggets id
+	$current_post_id = get_the_ID();
+
 	// hämta de 3 senaste blogginläggen, oavsett kategori
 	$latest_posts_query = new WP_Query([
 		'post_type' => 'post',
 		'posts_per_page' => 3,
+		'post__not_in' => [$current_post_id],
+		// 'post__not_in' => [get_the_ID()], // same thing as above but shorter
 	]);
 
 	if ($latest_posts_query->have_posts()) {
