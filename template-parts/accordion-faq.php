@@ -2,6 +2,8 @@
 	// hämta ut alla blogginlägg från kategorin med slug:en 'faq'
 	$faq_query = new WP_Query([
 		'category_name' => 'faq',
+		'order' => 'asc',
+		'orderby' => 'title',
 	]);
 
 	// om det finns några blogginlägg, starta en accordion
