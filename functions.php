@@ -172,7 +172,7 @@ function mbt_filter_the_title($title) {
 	}
 	return $title;
 }
-add_filter('the_title', 'mbt_filter_the_title', 10, 1);
+// add_filter('the_title', 'mbt_filter_the_title', 10, 1);
 
 /**
  * Restrict the_excerpt to 20 words.
