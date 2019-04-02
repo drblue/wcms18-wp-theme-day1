@@ -1,6 +1,3 @@
-<div class="pagination-links">
-	<?php the_posts_pagination([
-		'show_all' => true,
-		'before_page_number' => 'Page',
-	]); ?>
+<div class="pagination-links d-flex justify-content-center">
+	<?php b4st_pagination(); ?>
 </div>

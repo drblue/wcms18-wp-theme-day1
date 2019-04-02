@@ -1,6 +1,7 @@
 <?php
 
 require("inc/bs4navwalker.php");
+require("inc/pagination.php");
 
 /**
  * Register menus for our theme.
