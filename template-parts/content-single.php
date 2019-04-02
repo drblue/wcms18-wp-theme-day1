@@ -13,3 +13,7 @@
 	<?php the_content(); ?>
 </article>
 <!-- End of Blog Post -->
+
+<!-- Pagination -->
+<?php get_template_part('template-parts/post-pagination'); ?>
+<!-- /Pagination -->
