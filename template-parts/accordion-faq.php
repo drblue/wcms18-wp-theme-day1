@@ -54,7 +54,7 @@
 		wp_reset_postdata();
 	} else {
 		?>
-			<p><em>Sorry, no FAQs found.</em></p>
+			<p><em><?php _e('Sorry, no FAQs found.', 'mybasictheme'); ?></em></p>
 		<?php
 	}
 

@@ -3,7 +3,7 @@ get_header();
 ?>
 
 <main class="container">
-	<h1><?php single_cat_title('Category Archive for: '); ?></h1>
+	<h1><?php single_cat_title(__('Category Archive for: ', 'mybasictheme')); ?></h1>
 
 	<div class="row">
 		<div class="col-md-9 content">

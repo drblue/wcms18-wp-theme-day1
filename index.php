@@ -3,7 +3,7 @@ get_header();
 ?>
 
 <main class="container">
-	<h1>Welcome!</h1>
+	<h1><?php _e('Welcome!', 'mybasictheme'); ?></h1>
 
 	<div class="row">
 		<div class="col-md-9 content">

@@ -3,7 +3,7 @@ get_header();
 ?>
 
 <main class="container">
-	<h1>Posts by author: <?php the_author(); ?></h1>
+	<h1><?php _e('Posts by author:', 'mybasictheme'); ?> <?php the_author(); ?></h1>
 
 	<div class="row">
 		<div class="col-md-9 content">

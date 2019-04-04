@@ -8,7 +8,17 @@
 		</div>
 	<?php endif; ?>
 
-	<p class="text-muted"><em>Post Created: <?php echo get_the_date(); ?> by <?php the_author(); ?></em></p>
+	<p class="text-muted">
+		<em>
+			<?php
+				printf(
+					__('Post Created: %s by %s', 'mybasictheme'),
+					get_the_date(),
+					get_the_author()
+				);
+			?>
+		</em>
+	</p>
 
 	<?php the_content(); ?>
 </article>

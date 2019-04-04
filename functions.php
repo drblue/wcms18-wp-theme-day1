@@ -124,6 +124,9 @@ function mbt_theme_setup() {
 		'flex-width'			=> true,
 		'flex-height'			=> true,
 	]);
+
+	// Add i18n
+	load_theme_textdomain('mybasictheme', get_template_directory() . '/languages');
 }
 add_action('after_setup_theme', 'mbt_theme_setup');
 

@@ -14,7 +14,16 @@
 			</div>
 		</div><!-- /.card-body -->
 		<div class="card-footer">
-			<small class="text-muted">Post Created: <?php echo get_the_date(); ?> by <?php the_author_posts_link(); ?> in <?php the_category(', '); ?></small>
+			<small class="text-muted">
+				<?php
+					printf(
+						__('Post Created: %s by %s in %s', 'mybasictheme'),
+						get_the_date(),
+						get_the_author_posts_link(),
+						get_the_category_list(', ')
+					);
+				?>
+			</small>
 		</div><!-- /.card-footer -->
 	</div><!-- /.card -->
 </div><!-- /.col -->

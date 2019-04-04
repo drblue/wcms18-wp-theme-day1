@@ -6,7 +6,7 @@ get_header();
 
 	<div class="row">
 		<div class="col-md-9 content">
-			<h1>Sorry, that page is missing 👻!</h1>
+			<h1><?php _e('Sorry, that page is missing 👻!', 'mybasictheme'); ?></h1>
 
 			<!-- <img src="https://banner2.kisspng.com/20180330/gww/kisspng-pixel-art-ghost-drawing-pixel-5abe367896dc87.9378433915224152246179.jpg" class="img-fluid"> -->
 
