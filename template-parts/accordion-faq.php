@@ -4,6 +4,8 @@
 		'category_name' => 'faq',
 		'order' => 'asc',
 		'orderby' => 'title',
+		// 'posts_per_page' => -1,
+		'paged' => get_query_var('paged'),
 	]);
 
 	// om det finns några blogginlägg, starta en accordion
@@ -36,6 +38,17 @@
 					}
 				?>
 			</div><!-- End of Accordion -->
+
+			<!-- pagination -->
+			<div class="pagination-links d-flex justify-content-between mt-2">
+				<div class="previous-page">
+					<?php previous_posts_link(__('&laquo; Previous Page', 'mybasictheme')); ?>
+				</div>
+				<div class="next-page">
+					<?php next_posts_link(__('Next Page &raquo;', 'mybasictheme'), $faq_query->max_num_pages); ?>
+				</div>
+			</div>
+			<!-- /pagination -->
 		<?php
 		// reset postdata to main loop
 		wp_reset_postdata();
