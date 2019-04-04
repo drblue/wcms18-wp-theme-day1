@@ -204,4 +204,4 @@ function mbt_exclude_faq_posts($query) {
 		$query->set('cat', '-' . $faq_category_id);
 	}
 }
-add_action('pre_get_posts', 'mbt_exclude_faq_posts');
+// add_action('pre_get_posts', 'mbt_exclude_faq_posts');
