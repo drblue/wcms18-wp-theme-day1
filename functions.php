@@ -1,6 +1,7 @@
 <?php
 
 require("inc/bs4navwalker.php");
+require("inc/cpt.php");
 require("inc/pagination.php");
 
 /**
