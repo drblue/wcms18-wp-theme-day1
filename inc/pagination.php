@@ -17,8 +17,8 @@ if ( ! function_exists( 'b4st_pagination' ) ) {
 			'total' => $wp_query->max_num_pages,
 			'mid_size' => 5,
 			'prev_next' => True,
-			'prev_text' => __('<i class="fas fa-angle-left"></i> Newer', 'mybasictheme'),
-			'next_text' => __('Older <i class="fas fa-angle-right"></i>', 'mybasictheme'),
+			'prev_text' => __('<i class="fas fa-angle-left"></i> Previous', 'mybasictheme'),
+			'next_text' => __('Next <i class="fas fa-angle-right"></i>', 'mybasictheme'),
 			'type' => 'list'
 		) );
 		$paginate_links = str_replace( "<ul class='page-numbers'>", "<ul class='pagination'>", $paginate_links );
