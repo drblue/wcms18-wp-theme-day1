@@ -89,3 +89,27 @@ footer .widget {
 .card:hover {
 	background-color: #f9f9f9;
 }
+
+/**
+ * Movie Review Metadata
+ */
+.movie-metadata-wrapper {
+	background-color: #f9f9f9;
+	padding: 1rem 1.5rem;
+	margin-bottom: 1.5rem;
+}
+.movie-metadata-wrapper p:last-of-type {
+	margin-bottom: 0;
+}
+
+.archive-mbt_movie_review .card .card-footer p,
+.tax-mbt_actor .card .card-footer p,
+.tax-mbt_movie_genre .card .card-footer p {
+	margin-bottom: 0.25rem;
+}
+
+.archive-mbt_movie_review .card .card-footer p:last-of-type,
+.tax-mbt_actor .card .card-footer p:last-of-type,
+.tax-mbt_movie_genre .card .card-footer p:last-of-type {
+	margin-bottom: 0;
+}

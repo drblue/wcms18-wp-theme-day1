@@ -33,6 +33,16 @@ function mbt_widgets_init() {
 		'after_title'	=> '</h1>',
 	]);
 
+	// Movie Review Sidebar Widget Area
+	register_sidebar([
+		'name'			=> 'Movie Review Sidebar',
+		'id'			=> 'movie-review-sidebar',
+		'before_widget'	=> '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'	=> '</aside>',
+		'before_title'	=> '<h1 class="widget-title">',
+		'after_title'	=> '</h1>',
+	]);
+
 	// Page Sidebar Widget Area
 	register_sidebar([
 		'name'			=> 'Page Sidebar',
